@@ -1,0 +1,41 @@
+<div class="content-main">
+    <h1>Configura&ccedil;&otilde;es de parametros</h1>
+    <div class="col-lg-12" >
+        <h3>Formas de Pagamento</h3>
+        <form id="fp-form" class="form col-lg-3" method="post" action="controllers/usuario/controller.php?m=forma_pagamento">
+            <fieldset>
+                <div class="input-group">
+                    <input class="form-control" type="text" name="forma">
+                    <span class="input-group-addon add" data-target="fp-form">
+                        <span class="glyphicon glyphicon-plus-sign"></span>
+                    </span>
+                </div>
+            </fieldset>
+        </form>
+        <div class="col-lg-offset-1 col-lg-4">
+            <a href='#fp-a' data-toggle="collapse" class="btn btn-default form-control">Formas de Pagamento - Ativas</a>
+            <div id="fp-a" class="collapse in col-lg-12" style="margin-top: 15px;">
+                <!-- BEGIN FORMAS_PAGAMENTO -->
+                <div class="col-lg-10">{FORMA_PAGAMENTO}</div>
+                <a class="col-lg-1" href="controllers/usuario/controller.php?m=forma_pagamento&inserir=0&forma={FORMA_PAGAMENTO}">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </a>
+                <!-- END FORMAS_PAGAMENTO -->
+            </div>
+        </div>
+        <div class="  col-lg-4">
+            <a href='#fp' data-toggle="collapse" class="btn btn-default form-control">Formas de Pagamento - Inativas</a>
+            <div id="fp" class="collapse in col-lg-12" style="margin-top: 15px;">
+                <!-- BEGIN FORMAS_PAGAMENTO_INATIVAS -->
+                <div class="col-lg-10">{FORMA_PAGAMENTO}</div>
+                <a class="col-lg-1" href="controllers/usuario/controller.php?m=forma_pagamento&restore=1&forma={FORMA_PAGAMENTO}">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <!-- END FORMAS_PAGAMENTO_INATIVAS -->
+            </div>
+        </div>
+    </div>
+    <div>
+        <h3>Dados Recibo</h3>
+    </div>
+</div>

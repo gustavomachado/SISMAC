@@ -17,6 +17,7 @@ if (isset($_GET['m'])) {
     $method = $_GET['m'];
 
     switch ($method) {
+
         case 'salvar':
             salvar($dao);
             break;
@@ -52,6 +53,9 @@ if (isset($_GET['m'])) {
                 header("Location: /SISMAC/?c=usuario&v=login");
             }
 
+            break;
+        case 'forma_pagamento':
+            addFormaPagamento($dao);
             break;
         default:
 
@@ -158,6 +162,25 @@ function restaurar(GenericDAO $dao) {
     $_SESSION['msgbody'] = "Usu&aacute;rio restaurado com sucesso.";
     $_SESSION['msgclass'] = "msg-success";
     header("location: /SISMAC/?c=usuario&v=salvar");
+}
+
+function addFormaPagamento(GenericDAO $dao) {
+
+    $forma = $_REQUEST['forma'];
+
+    if (strlen($forma) > 0) {
+
+        if (isset($_REQUEST['inserir']) && !$_REQUEST['inserir']) {
+            $dao->query("UPDATE marina.formapagamento SET ativo=0 where descricao = '$forma'");
+        } else {
+            if (isset($_REQUEST['restore'])) {
+                $dao->query("UPDATE marina.formapagamento SET ativo=1 where descricao = '$forma'");
+            } else {
+                $dao->query("INSERT INTO marina.formapagamento(descricao)values('$forma');");
+            }
+        }
+    }
+    header("Location: /SISMAC/?c=parametros&v=configurar");
 }
 
 ?>

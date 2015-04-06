@@ -753,10 +753,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 --
 -- Extraindo dados da tabela `usuario`
 --
-insert into
-marina.formapagamento(descricao) 
-values
-('Cartao de Crédito'),('Cartão de Débito'),('Boleto'),('Cheque'),('Dinheiro');
+ 
 
 insert into `perfil`(perfil)values('administrador'),('usuario');
 

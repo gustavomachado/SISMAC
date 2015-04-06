@@ -20,7 +20,10 @@ $(document).ready(function () {
     });
 
 
-
+    $(".add").click(function(){
+       var target =  $(this).attr("data-target");
+       $("#"+target).submit();
+    });
 
 
     $(".muda-tipo-cliente").click(function () {

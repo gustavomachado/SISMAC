@@ -180,6 +180,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `marina`.`formapagamento` (
   `id` BIGINT NOT NULL AUTO_INCREMENT,
   `descricao` VARCHAR(100) NOT NULL,
+  `ativo` TINYINT(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
