@@ -1,0 +1,274 @@
+<div class="sidebar">
+    <div class="contato">
+        <div class="contato-content">
+            <div id="acorddion-tel">
+                <div id="telefones" class="titulo">
+                    <a data-toggle="collapse" data-parent="#acorddion-tel" href="#tel-collapse">
+                        Telefones
+                        <span id="quant-tel" class=" success badge pull-right">{TEL}</span>
+                    </a>
+                </div>
+            </div>
+            <div id="tel-collapse" class="panel-collapse collapse  ">
+                <div class="acorddion-body" id="tel">
+                    <div id="list-area-tel">
+                    </div>
+                    <div>
+                        <button class="btn btn-info  " data-toggle="modal" data-target="#modal-tel"
+                                >Adicionar novo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contato-content">
+            <div id="acorddion-end">
+                <div id="enderecos" class="titulo">
+                    <a href="#end-collapse" data-toggle="collapse" data-parent="#acorddion-end">
+                        Endere&ccedil;os
+                        <span id="quant-end" class="badge pull-right">{END}</span>
+                    </a>
+                </div>
+            </div>
+            <div id="end-collapse" class="panel-collapse collapse ">
+                <div class="acorddion-body" id="end">
+                    <div id="list-area-end">
+
+                    </div>
+                    <div>
+                        <button  class="btn btn-info  " data-toggle="modal" data-target="#modal-end">
+                            Adicionar novo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contato-content">
+            <div id="acorddion-email">
+                <div id="emails" class="titulo">
+                    <a href="#email-collapse" data-toggle="collapse" data-parent="#acorddion-email">
+                        Emails
+                        <span id="quant-email" class="badge pull-right">{EMAIL}</span>
+                    </a>
+                </div>
+            </div>
+            <div id="email-collapse" class="panel-collapse collapse ">
+                <div class="acorddion-body" id="email">
+                    <div id="list-area-email"></div>
+                    <div>
+                        <button class="btn btn-info  " data-toggle="modal" data-target="#modal-email"
+                                >Adicionar novo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contato-content">
+            <div id="acorddion-emb">
+                <div id="embarcacoes" class="titulo">
+                    <a href="#emb-collapse" data-toggle="collapse" data-parent="#acorddion-emb">
+                        Embarca&ccedil;&otilde;es
+                        <span id="quant-emb" class="badge pull-right">{EMB}</span>
+                    </a>
+                </div>
+            </div>
+            <div id="emb-collapse" class="panel-collapse collapse ">
+                <div class="acorddion-body" id="emb">
+                    <div id="list-area-emb"></div>
+                    <div>
+                        <button class="btn btn-info  " data-toggle="modal" data-target="#modal-emb"
+                                >Adicionar novo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="modal-tel">
+    <div class="modal-dialog bs-example-modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Adicionar Telefone</h4>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body-tel">
+                    <div>
+                        <label for="telefone">Numero do telefone</label>
+                        <input id="telefone" type="text" class="form-control" name="telefone" placeholder="(xxx) xxxx-xxxx" value="092)">
+                    </div>
+                    <hr>
+
+                    <label for="tipo">Tipo</label><br>
+                    <div id="radio-group-tel">
+                        <input class="radio-group-tel" type="radio" name="tipotel" value="c" checked="checked" >Comercial
+                        <input class="radio-group-tel" type="radio" name="tipotel" value="r">Resid&ecirc;ncial
+                    </div>
+                    <hr>
+                    <label for="operadora">Operadora</label>
+                    <select name="operadora" id="select-operadora" class="form-control">
+                        <!-- BEGIN OPERADORAS -->
+                        <option value="{OPERADORA}">{OPERADORA}</option>
+                        <!-- END OPERADORAS -->
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="msg-area-tel float">
+
+                </div>
+                <div class="float-r">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Cancelar</button>
+                    <button id="idtel" type="button" class="btn btn-info">Salvar</button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="modal-end">
+    <div class="modal-dialog bs-example-modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Adicionar Endere&ccedil;o</h4>
+            </div>
+            <div class="modal-body ">
+                <div id="modal-body-endereco">
+                    <label for="tipo">Tipo</label><br>
+                    <div id="radio-group-end">
+                        <input class="radio-group-end" type="radio" id="option1" name="tipoend" value="c" checked="checked"/>Comercial
+                        <input class="radio-group-end" type="radio" id="option2" name="tipoend" value="r"  />Resid&ecirc;ncial
+                    </div>
+                    <div class="full">
+                        <label for="rua">Rua</label>
+                        <input type="text" class="form-control"  name="rua" placeholder="Ex. av. max teixeira">
+                        <label for="bairro">Bairro</label>
+                        <input type="text" class="form-control" name="bairro" placeholder="Ex. Cidade nova">
+                    </div>
+                    <div class="middle">
+                        <label for="Cidade">Cidade</label>
+                        <input type="text" class="form-control" name="cidade" value="Manaus" placeholder="Ex. manaus">
+                    </div>
+                    <div class="middle">
+                        <label for="Estado">Estado</label>
+                        <input type="text" class="form-control" name="estado" value="AM" placeholder="Ex. AM">
+                    </div>
+                    <div class="middle">
+                        <label for="Numero">Nº</label>
+                        <input type="text" class="form-control" name="numero" placeholder="Ex. 16 a">
+                    </div>
+                    <div class="middle">
+                        <label for="">CEP</label>
+                        <input id="cep" type="text" class="form-control" name="cep" placeholder="xx.xxx-xxx">
+                    </div>
+                    <div class="full">
+                        <label for="Complemento">Complemento</label>
+                        <input type="text" class="form-control" name="complemento" placeholder="Ex. APTO. 01">
+                        <label for="">Ponto de refer&ecirc;cia</label>
+                        <input type="text" class="form-control" name="referencia" placeholder="Ex. proximo ao super mercado DB">
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="msg-area-end float">
+
+                </div>
+                <div class="float-r">
+                    <button type="button" class="btn btn-info cancel" data-dismiss="modal">Cancelar</button>
+                    <button type="button" id="idend" class="btn btn-info">Salvar</button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="modal-email">
+    <div class="modal-dialog bs-example-modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Adicionar E-mail</h4>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <label for="email">Email</label>
+                    <input id="email-cliente" type="text" name="email" class="form-control" placeholder="exemplo@servidor.com">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="msg-area-email float">
+
+                </div>
+                <div class="float-r">
+                    <button type="button" class="btn btn-info cancel" data-dismiss="modal">Cancelar</button>
+                    <button id="idemail" type="button" class="btn btn-info">Salvar</button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="modal-emb">
+    <div class="modal-dialog bs-example-modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title">Adicionar Embarca&ccedil;&otilde;es</h2>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body-emb">
+                    <legend>Dados da embarca&ccedil;&atilde;o</legend>
+                    <div class="middle">
+                        <label for="">Nome da embarca&ccedil;&atilde;o</label>
+                        <input type="text" name="nomeemb" class="form-control" placeholder="carol II">
+                    </div>
+                    <div class="middle">
+                        <label for="">Marca do Motor</label>
+                        <input type="text" name="marcaemb" class="form-control" placeholder="honda xxx">
+                    </div>
+                    <div class="middle">
+                        <label for="">Cor</label>
+                        <input type="text"  name="coremb" class="form-control" placeholder="branco">
+                    </div>
+                    <div class="middle">
+                        <label for="">Nº do Casco</label>
+                        <input type="text"  name="casco" class="form-control" placeholder="informe o nº do casco">
+                    </div>
+
+                    <legend>Dados Contrato</legend>
+                    <div class="middle">
+                        <label for="vencimento">Dia Vencimento</label>
+                        <input class="form-control" type="number" name="vencimento" min="1" max="31" >
+                    </div>
+                    <div class="middle ">
+                        <label for="tipo">Tipo de Contrato</label>
+                        <select name="tipoContrato" class="form-control" id="">
+                            <option value="pre">PR&Eacute; PAGO</option>
+                            <option value="pos">P&Oacute;S PAGO</option>
+                        </select>
+                    </div>	
+                    <div class="middle">	
+                        <label for="valor">Valor Mensalidade</label>
+                        <input class="form-control money " type="text" name="mensalidade">
+                    </div>
+                    <div class="col-sm-5">	
+                        <label for="datainicio">Data inicio</label>
+                        <div class='input-group date datetimepicker'>
+                            <input class="data form-control dtinicio" type="text" disabled value="{DATAINICIO}" data-date-format="DD/MM/YYYY" placeholder="DD/MM/YYYY" name="datainicio">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="msg-area-emb float">
+
+                </div>
+                <div class="float-r">
+                    <button type="button" class="btn btn-info cancel" data-dismiss="modal">Cancelar</button>
+                    <button id="idemb" type="button" class="btn btn-info">Salvar</button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

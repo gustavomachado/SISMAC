@@ -1,0 +1,40 @@
+<div class="content-main">
+    <legend>
+        <h1>Baixar Mensalidades</h1>
+    </legend>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <table class="table table-bordered table-hover table-striped table-condensed text-center">
+                <thead>
+                    <tr class="info">
+                        <th>Status Contrato</th>
+                        <th>Tipo Contrato</th>
+                    <!--    <th>Status Mensalidade</th> -->
+                        <th>M&ecirc;s Refer&ecirc;ncia</th>
+                        <th>Vencimento</th>
+                        <th>Valor</th>
+                        <th>Embarca&ccedil;&atilde;o</th>
+                        <th>Respons&aacute;vel</th>
+                        <th>Ac&atilde;o</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- BEGIN LISTAMENSALIDADES -->
+                    <tr class="warning">
+                        <td>{STATUS}</td>
+                        <td>{TIPO}</td>
+                     <!--   <td>{STATUSMENSALIDADE}</td> -->
+                        <td>{MESMENSALIDADE}</td>
+                        <td>{VENCIMENTO}</td>
+                        <td >{VALOR}</td>
+                        <td>{EMBARCACAO}</td>
+                        <td>{DONO}</td>
+                        <td><a href="?c=mensalidade&v=baixar&idmensalidade={IDMENSALIDADE}"><span class="glyphicon glyphicon-download-alt"></span></a></td>
+                    </tr>
+                    <!-- END LISTAMENSALIDADES -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

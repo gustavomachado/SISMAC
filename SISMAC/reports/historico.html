@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+--->
+<html>
+    <head>
+        <meta charset="ISO-8859-1">
+        <link rel="shortcut icon" href="../resources/images/user.png">
+        <title>SisMAC-Marina &Aacute;guas Claras</title>
+        <link rel="stylesheet" href="../resources/css/bootstrap.css">
+        <link rel="stylesheet" href="../resources/css/font-awesome.css">
+        <link rel="stylesheet" href="../resources/css/bootstrap-datetimepicker-site.css">
+        <link rel="stylesheet" href="../resources/css/pygments-manni.css">
+        <link rel="stylesheet" href="../resources/css/bootstrap-datetimepicker.css">
+        <link rel="stylesheet" href="../resources/css/style.css">
+        <link rel="stylesheet" href="../resources/css/imprimir.css" media="print">
+
+        <script type="text/javascript" src="../resources/js/jquery-1.11.1.js"></script>
+        <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+        <script type="text/javascript" src="../resources/js/bootstrap.js"></script>
+        <script type="text/javascript" src="../resources/js/extenso.js"></script>
+        <script type="text/javascript" src="../resources/js/functions.js"></script>
+        <script type="text/javascript" src="../resources/js/jquery.mask.js"></script>
+        <script type="text/javascript" src="../resources/js/jquery.maskMoney.js"></script>
+        <script type="text/javascript" src="../resources/js/moment.js"></script>
+        <script type="text/javascript" src="../resources/js/bootstrap-datetimepicker.js"></script>
+
+    </head>
+    <body>
+        <div class="container" style="background: #eee; min-height: 600px; border: 1px solid #888; margin-bottom: 200px">
+            <h1 style="border-bottom:  3px solid #777;">HIST&Oacute;RICO DE CLIENTES</h1>
+            <h3 class="title-history">Dados Pessoais</h3>
+            <hr>
+            <div class="col-lg-2">
+                <img src="../resources/images/user.png" class="img-thumbnail" >
+            </div>
+            <div class="col-lg-10 row  " >
+                <div class="col-lg-6">
+                    <p><strong>Nome:</strong> {NOME_CLIENTE}</p>
+                </div>
+                <div class="col-lg-6 dados-pessoais">
+                    <p><strong>Conjugue:</strong> {NOME_CONJUGUE}</p>
+                </div>
+                <div class="col-lg-6 cpf dados-pessoais">
+                    <p><strong>CPF/CNPJ:</strong> {CPF_CNPJ}</p>
+                </div>
+                <div class="col-lg-6 dados-pessoais">
+                    <p><strong>Rg:</strong> {RG}</p>
+                </div>
+                <div class="col-lg-6 dados-pessoais">
+                    <p><strong>Data Nascimento:</strong> {DATA_NASCIMENTO} </p>
+                </div>
+                <div class="col-lg-6 dados-pessoais">
+                    <p><strong>Cliente desde:</strong> {DATA_INICIO_CLIENTE}</p>
+                </div>
+            </div>
+            <div class="col-lg-12 ">
+                <h3 class="title-history">Embarca&ccedil;&otilde;es</h3>
+                <hr>
+                <div class=" ">
+                    <!-- BEGIN EMBARCACOES -->
+                    <div class="   col-lg-6">
+                        <p><strong>Nome:</strong> {NOME_EMBARCACAO}</p>
+                    </div>
+                    <div class="   col-lg-6">
+                        <p><strong>Cor:</strong> {COR_EMBARCACAO}</p>
+                    </div>
+                    <div class="   col-lg-6">
+                        <p><strong>Casco:</strong> {CASCO_EMBARCACAO}</p>
+                    </div>
+                    <div class="   col-lg-6">
+                        <p><strong>Motor:</strong> {MOTOR_EMBARCACAO}</p>
+                    </div>
+                    <div class="col-lg-12 row" >
+                        <h4 class="title-history">Contratos: {NOME_EMBARCACAO}</h4>
+                        <!-- BEGIN CONTRATOS -->
+                        <div class="col-lg-6">
+                            <p><strong>Cod: </strong>{ID_CONTRATO}</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p><strong>Tipo Contrato: </strong> {TIPO_CONTRATO}</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p><strong>Dia Vencimento: </strong> {DIA_VENCIMENTO}</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p><strong>Valor: </strong> R$ {VALOR_CONTRATO}</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p><strong>Data Inicio: </strong> {DATA_INICIO_CONTRATO}</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p><strong>Data Recis&atilde;o: </strong> {DATA_FIM_CONTRATO}</p>
+                        </div>
+                        <!-- BEGIN MENSALIDADES_ANO -->
+                        <div class="col-lg-3 ">
+                            Mensalidades em: {ANO_REFERENCIA}
+                        </div>
+                        <div class="row   btn panel panel-default   "  >
+                            <div class="col-lg-2  ">
+                                Mês:
+                            </div> 
+                            <div class="col-lg-2 ">
+                                Status:
+                            </div> 
+                            <div class="col-lg-3 ">
+                                Data Vencimento: 
+                            </div>
+                            <div class="col-lg-3  ">
+                                Data Pagamento:
+                            </div>
+                            <div class="col-lg-2 ">
+                                Forma Pagamento:
+                            </div>
+                            <!-- BEGIN MENSALIDADES_MES -->
+
+                            <div class="col-lg-2">
+                                {MES_REFERENCIA} 
+                            </div>
+
+                            <div class="col-lg-2 ">
+                                {STATUS}
+                            </div>
+
+                            <div class="col-lg-3 ">
+                                {DATA_VENCIMENTO_MENSALIDADE} 
+                            </div>
+
+                            <div class="col-lg-3  ">
+                                {DATA_PAGAMENTO_MENSALIDADE}
+                            </div>
+                            <div class="col-lg-2 ">
+                                {FORMA_PAGAMENTO}
+                            </div>
+                            <hr>
+                            <!-- END MENSALIDADES_MES -->
+                        </div>
+                        <!-- END MENSALIDADES_ANO -->
+                        <div class="col-lg-12 line"></div>
+                        <!-- END CONTRATOS -->
+                        <h5>Sem Contratos</h5>
+                        <!-- FINALLY CONTRATOS -->
+                    </div>
+                    <!-- END EMBARCACOES -->
+                    <h3>Sem Embarca&ccedil;&otilde;es</h3>
+                    <!-- FINALLY EMBARCACOES -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

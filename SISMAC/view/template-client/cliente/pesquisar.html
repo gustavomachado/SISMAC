@@ -1,0 +1,33 @@
+<div class="content">
+	<h1>Pesquisa de Clientes</h1>
+	<form action="controllers/cliente/controller.php?m=pesquisar" method="post">
+		<fieldset>
+			<legend>Filtro de Pesquisa</legend>
+			
+			<div class="col-sm-2">
+				<label for="id">C&oacute;digo</label>
+				<input class="form-control" type="text" value="{CODCLIENTE}" name="id">
+			</div>
+			<div class="col-lg-3">
+				<label for="cpf">CPF/CNPJ</label>
+				<input name="cpf" type="text" value="{CPFCLIENTE}" class="form-control"></div>
+			<div class="col-lg-4">
+				<label for="nome">Nome do Cliente</label>
+				<input type="text" name="nome" value="{NOMECLIENTE}" class="form-control">
+			</div>
+			<div class="col-lg-3">
+				<label for="emb">Nome da Embarca&ccedil;&atilde;o</label>
+				<input type="text" name="emb" value="{NOMEEMB}" class="form-control">
+			</div>
+		</fieldset>
+		<hr>
+		<div class="col-lg-2">
+			<button class="btn btn-info" id="gravar">
+				<span>Pesquisar</span>
+			</button>
+		</div>
+		<div class="lista clean">
+			{LISTARESULTADO}
+		</div>
+	</form>
+</div>

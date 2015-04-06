@@ -1,0 +1,129 @@
+<div class="content-main">
+    <legend>
+        <h1>Baixar Mensalidade</h1> 
+    </legend>
+    <form class="form-horizontal" id="fomulario-baixar-mensalidade" action="controllers/mensalidade/controller.php?r=1&m=baixar&id={IDMENSALIDADE}" data-target="{IDMENSALIDADE}" method="post">
+        <fieldset>
+            <input type="hidden" name="idContrato" value="{IDCONTRATO}">
+            <div class="row">
+                <div class="col-lg-12 panel-mensalidade">
+                    <div class="col-lg-12">
+                        <h3>Dados Mensalidade</h3>
+                    </div>
+                    <div class="col-lg-9">
+                        <h4>Cliente</h4>
+                    </div>
+                    <div class="col-lg-3">
+                        <h4><strong>{CLIENTE}</strong></h4>
+                    </div>
+                    <div class="col-lg-9">
+                        <h4>Embarca&ccedil;&atilde;o: </h4>
+                    </div>
+                    <div class="col-lg-3">
+                        <h4><strong>{EMBARCACAO}</strong></h4>
+                    </div>
+                    <div class="col-lg-9">  
+                        <h4>Data de Vencimento</h4>
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="hidden" name="data_vencimento" value="{DATAVENCIMENTO}">
+                        <h4><strong >{DATAVENCIMENTO}</strong></h4>
+                    </div>
+                    <div class="col-lg-9">  
+                        <h4>M&ecirc;s/Ano Refer&ecirc;ncia </h4>
+                    </div>
+                    <div class="col-lg-3">
+                        <h4><strong >{REFERENCIA}</strong></h4>
+                    </div>
+                    <div class="col-lg-9">  
+                        <h4>Valor do Contrato: </h4>
+                    </div>
+                    <div class="col-lg-3">
+                        <h4><strong id="valorContrato">{VALORCONTRATO}</strong></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 panel-mensalidade">
+                    <div class="col-lg-12">
+                        <h3>Outras Deduções</h3>
+                    </div>
+                    <div class="col-lg-9">
+                        <h4>Multa Atraso <!--<strong>{MULTA}%</strong>--></h4>
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="hidden" name="multa" value="{MULTA}" class="valor-multa">
+                        <h4>{VALORMULTA}</h4>
+                    </div>
+                    <div class="col-lg-9">
+                        <h4>Mora Dia <!--<strong>{JUROSMES}%</strong>--></h4>
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="hidden" name="moradia" value="{MORADIACAL}" class="mora-dia">
+                        <h4>{MORADIA}</h4>
+                    </div>
+                    <div class="col-lg-9">
+                        <h4>Dias em Atraso</h4>
+                    </div>
+                    <div class="col-lg-3">
+                        <h4>{DIASATRASO}</h4>
+                    </div>
+                    <div class="col-lg-9">
+                        <h4>Outros Acr&eacute;scimos</h4>
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="text" class="form-control money acrescimo" name="acrescimo" value="{ACRESCIMO}">
+                    </div>
+                    <div class="col-lg-9">
+                        <h4>Descontos</h4>
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="text" class="form-control money desconto" name="desconto" value="{DESCONTO}">
+                    </div>
+                    <div class="col-lg-9">
+                        <h4>Valor Final da Mensalidade</h4>
+                    </div>
+                    <div class="col-lg-3">
+                        <h4><strong id="valorMensalidade" class="money">{VALORMENSALIDADE}</strong></h4>
+                    </div>
+                    <div class="col-lg-12">
+                        <h3>Descri&ccedil;&atilde;o do Pagamento</h3>
+                    </div>
+                    <div class="col-lg-9">
+                        <h4>Forma de Pagamento</h4>
+                    </div>
+                    <div class="col-lg-3">
+                        <select class="form-control" name="forma-pagamento">
+                            <!-- BEGIN LISTA_FP -->
+                            <option value="{ID_FP}">{DESCRICAO_FP}</option>
+                            <!-- END LISTA_FP-->
+                        </select>
+                    </div>
+                    <div class="col-lg-9">
+                        <h4>Data do Pagamento</h4>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class='input-group date datetimepicker'>
+                            <input class="form-control data" type="text" name="datapagamento" value="{HOJE}"
+                                   data-date-format="DD/MM/YYYY" required placeholder="DD/MM/YYYY">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 botoes-mensalidade">
+                <div class="col-lg-3">
+                    <button type="button" class="btn btn-info btn-block baixar">Baixar Mensalidade</button>
+                </div>
+                <div class="col-lg-3">
+                    <button type="submit" class="btn btn-info btn-block">Baixar e Imprimir Recibo</button>
+                </div>
+                <div class="col-lg-3">
+                    <a class="btn btn-info btn-block">Agrupar Todas as Mensalidades</a>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>

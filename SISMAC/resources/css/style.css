@@ -1,0 +1,714 @@
+ 
+body , legend{
+    color: #004961;	
+}
+
+.form-control::-webkit-input-placeholder{
+    color:#b4b4b4;
+}
+.form-control{
+    border-radius: 1px;
+}
+.Temp-container{
+    background-image: linear-gradient(to top , #bebeff , #dfdfff, #e4e4ff , #ededff , #f4f4ff);
+    width: 100%;
+    height: 600px;
+
+}
+input[type=text]{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.input-group-addon{
+    background: #8DC3DA;
+    color: #004961;
+}
+.Temp-content{
+    height: 100%;
+    float: left;
+    width: 98%;
+}
+
+.content{
+    max-width: 70%;
+    min-width: 69.99%;
+    margin: 0 auto 200px auto;
+    border-radius: 10px;
+    float: left;
+}
+.content ,  .content-main{
+    min-height: 600px;
+}
+body > div , .modal-body{
+    background: #f6fBF1;
+}
+.container{
+
+}
+.Temp-sidebar{
+    float: left;
+    max-width: 25%;
+    min-width: 24.99%;
+    margin-left: 20px;
+}
+.sidebar{
+    width: 100%;
+    min-height: 500px;
+    padding-top: 20px;
+}
+
+.titulo{
+    margin: 20px 0  0 10px;
+    padding: 0 10px;
+    background-color:#8DC3DA;
+    min-height: 40px;
+    color: #004961;	
+    transition: all .5s; 
+    border: 1px solid #E6F2F3;
+}
+.contato-content{
+    box-shadow: 10px 10px 5px #d4d4d4;
+}
+.titulo a{
+    display: block;
+    width: 100%;
+    min-height: 40px;
+    color: #004961;
+    text-decoration: none;
+    font-weight: bold;
+    padding-top: 10px;
+}
+.col-open{
+    //border-radius: 10px 10px 0 0 ;
+}
+.titulo:hover{
+    background: #E6F2F3;
+    color: #004961;	
+    border: 1px solid #8DC3DA;
+}
+.titulo:hover a{
+    text-decoration: none;
+}
+.titulo span{
+    min-width: 30px;
+    min-height: 18px;
+    color: black;
+}
+.titulo:hover .badge{
+    background: #8DC3DA;
+}
+.badge{
+    background: #E6F2F3;
+}
+.blue{
+    background: #8DC3DA;	
+}
+
+.float{
+    float : left;
+}
+.float-r{
+    float: right;
+}
+.clean{
+    clear: both;
+}
+.align-right{
+    text-align: right;
+}
+
+/*############################# HEADER ########################*/
+
+.linha{
+    height: 12px;
+    border-radius: 5px;
+    // background: #eaeaff;
+    background: #E6F2F3;
+}
+
+.sub-header-1{
+    padding-top: 25px;
+    float: left;
+}
+.sub-header-2{
+
+    float: left;
+    margin: 30px 0 30px 20px;
+    width: 300px;
+
+}
+.sub-header-2 .logged-user{
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.logged-user span{
+    text-decoration: underline;
+}
+.sub-header-2 .sub-header-2-container{
+    margin: 0 auto;
+
+}
+.main-header , .footer{
+    //  padding-left: 120px;
+    height: 116px;
+    width: 100%;
+}
+
+.main-header , .footer , .modal-header , .modal-footer {
+    background: #DAE1FF;
+}
+.separator-header{
+    width: 2px;
+    background-image: linear-gradient(to left , #777, #ccc);
+    height: 44%;
+    border-radius: 2px;
+    margin: 11px 10px 0 8px; 
+}
+.sistema-nome-header{
+    width: 300px;
+    height: 40px;
+}
+
+.sistema-nome-header h4, .sistema-nome-header div{
+    float: left;
+    font-weight: bold;
+    //font-family: lucida fax;
+}
+
+.nav-header{
+    clear: both;
+}
+.buttons .btn {
+    width: 100px;
+    height: 35px;
+    margin: 0 0 0 35px;
+    float:left;
+}
+.buttons button , .btn-info , .btn-success {
+    text-align: center;
+    color: #191970;
+    font-weight: bold;
+    background-color:#8DC3DA;
+    border-radius: 1px;
+    transition: all .5s; 	
+
+}
+.buttons button:hover , .btn-info:hover,.btn-success:hover{
+    background: #E6F2F3;
+    border-radius: 1px;
+    border: 1px solid #8DC3DA;
+    color: #191970;
+}
+
+/*################# FORM LOGIN ########################*/
+.login{
+    min-height: 600px;
+    background: url("../images/logo.png") no-repeat top;
+    padding: 365px 180px 0 630px;
+}
+.login legend{
+    font-weight: bold;
+    text-align: center;
+}
+
+.form{
+    max-height: 200px;
+    margin: 0 auto;
+}
+
+/*####################### MENU DE NAVEGAÇÂO #######################*/
+.menu{
+    background: red;
+}
+.menu li{
+    list-style: none;
+}
+.menu ul{
+    padding: 0;
+}
+.menu ul li{
+    float: left;
+    background-color:#8DC3DA; 
+    border-top: 1px #d4d4ff solid;
+    border-left: 1px #d4d4ff solid;
+    border-right: 1px #d4d4ff solid;
+    transition: all .6s; 	 	
+}
+.menu ul li:hover{
+    background: #E6F2F3;
+    border-top: 1px #8DC3DA solid;
+    border-left: 1px #8DC3DA solid;
+    border-right: 1px #8DC3DA solid;
+}
+
+.menu ul li a{
+    display: block;
+    width: 130px;
+    height: 40px;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #004961;	
+
+}
+.menu .selected{
+
+    color:#004961;
+    border: 1px solid #8DC3DA;
+    border-bottom: none;
+    background: #E6F2F3;
+
+}
+.menu .selected a {
+    color:#004961;	
+}
+
+/*	gt-s7562l
+        9298121-9855
+/*###########################    CLIENT-HOME			###############################*/
+
+.opcao{
+    width: 160px;
+    height: 160px;
+    float: left;
+    background: #8DC3DA;
+    margin: 15px 0 0px 15px;
+    border: 1px #eaeaea solid;
+    transition: all .5s;
+}
+
+.opcao a{
+    display: block;
+    width: 100%;
+    height:100%;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    color: #191970;
+    box-shadow: 8px 8px 12px #aaa;
+}
+.opcao img{
+    height: 60%;
+    width: 60%;
+    display: block;
+    margin: 0 auto 15px;
+    padding: 15px;
+}
+.opcao a:hover{
+    text-decoration: none;
+}
+.opcao:hover{
+    background: #E6F2F3;
+    border: 1px #8DC3DA solid;
+}
+.list-content .list-body .opcao{
+    width: 255px;
+    height: 255px;
+}
+.list-content .list-body  .opcao a{
+    text-align: left;
+    box-shadow: none;
+    box-shadow: 8px 8px 12px #aaa;
+
+}
+.list-content .list-body  .opcao a div{
+    padding-top:  5px;
+}
+.list-content .list-body  .opcao img{
+    //   margin-top: 5px;
+    padding: 3px;
+    background: #004981;
+    box-shadow: 5px 5px 10px #004961;
+}
+
+.list-content .list-body  .opcao a p{
+    padding-left: 10px;
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+/*#################	CLIENTE-CADASTRO		#################*/
+/*###########   	sidebar 	##############*/
+.acorddion-body{
+    width: 96.4%;
+    margin: 0 0 0 10px;
+    border-radius: 0 0 5px 5px;
+    background-color:#eee;
+}
+.acorddion-body p{
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
+    margin: 0 20px 5px 20px;
+    min-height: 25px;
+    text-transform: uppercase;
+}ccedil
+.acorddion-body .statistic p{
+    text-transform: lowercase;
+    text-transform: capitalize;
+    font-weight: bold;
+    text-align: justify;
+}
+.acorddion-body .statistic span{
+    font-weight: normal;
+}
+.sidebar-resumo{
+    margin-top: 85px;	
+}
+.sidebar-resumo .titulo{
+    border: 1px solid #8DC3DA;
+}
+.sidebar-resumo .acorddion-body{
+    padding: 5px 0;
+    border-left:   1px solid #8DC3DA;
+    border-right:   1px solid #8DC3DA;
+    border-bottom:   1px solid #8DC3DA;
+    border-radius: 2px;
+    box-shadow: 15px 15px 5px #d4d4d4;
+}
+.sidebar-resumo .acorddion-body  a{
+    color: #004961;
+    transition: all .5s;
+}
+.sidebar-resumo .acorddion-body a:hover{
+    color: #004981 ;
+    text-decoration: none;
+}
+.acorddion-body p a:hover{
+    text-decoration: none;
+}
+
+.acorddion-body ul{
+    padding-right: 19px;
+}
+.acorddion-body p a{
+    text-decoration: none;	
+}
+.acorddion-body button{
+    width: 100%;
+}
+.acorddion-body .glyphicon{
+    text-align: right;
+}
+#list-area-email p a{
+    font-size: 6pt;
+}
+
+.full {
+    width: 100%;
+    float: left;
+}
+.full *{
+    width: 100%;
+    display: block;
+}
+.middle{
+    width: 50%;
+    float: left;
+}
+.middle *{
+    display: block;
+}
+#modal-body-endereco{
+    min-height: 400px;
+}
+.modal-body-emb{
+    min-height: 200px;
+}
+#modal-body-endereco .middle .form-control, .modal-body-emb .middle .form-control{
+    width: 85%;
+}
+.modal-body-tel .form-control{
+    width: 50%;
+}
+.modal-body-tel div{
+    margin: 0 auto;
+}
+.modal-body-emb{
+    min-height: 350px;
+}
+.bold{
+    font-weight: bold;
+}
+
+.sidebar-home h3{
+    margin: 0;
+    text-align: center;
+}
+/*################ FORMULARIO DE CADASTRO #######################*/
+
+.cadstro form fieldset .col-lg-4{
+    padding:0;
+}
+.msg-area-body{
+    min-height: 30px;
+    width: 380px;
+    color: #8DC3DA;
+}
+
+/*######################### FOOTER ######################*/
+
+.Temp-footer{
+    // background: red;
+    //  padding: 10px;
+    //  height: 100px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 70px;
+}
+
+.footer h4 {
+    margin: 20px;
+    padding: 0px ;
+    color: #222;
+}
+.footer a , .footer a:hover{
+    text-decoration: none;
+    color: #222;
+}
+.footer div{
+    margin-left: 100px;
+}
+.msg{
+    min-height: 80px;
+    max-width: 800px;
+    margin: 10px auto 0;
+    text-align: center;
+    padding-top: 1px;
+}
+.msg-success{
+    background: #dff;
+    border: 1px solid #dadaff;
+}
+
+.msg-erro{
+    background: #FFaa66;
+    border: 1px solid #d77;	
+}
+.msg h2{
+    margin-top: 5px;
+    font-weight: bold;
+}
+.no-msg *{
+    margin: 0;
+}
+.title-form h1{
+    width: 70%;
+}
+.title-form .btn{
+    margin-top: 35px;
+}
+.teste{
+    background-color: #a4a4ef;
+
+}
+.lista table{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.lista {
+    margin-top: 70px;
+}
+.lista th a{
+    color:#004961;
+}
+.lista th a:hover{
+    text-decoration: none;
+}
+.center{
+    text-align: center;
+}
+
+.list-content table tr td{
+    vertical-align: middle;
+}
+
+.ficha{
+    border-radius: 2px;
+    background: #e4e4ff;
+    min-height: 500px;
+    padding: 10px;
+    box-shadow: 10px 10px 12px #aaa;
+}
+.ficha .panel{
+    padding: 10px;
+    background: #EEEEff;
+    min-height: 55px;
+    box-shadow: 3px 3px 3px #8DC3DA ;
+}
+.ficha span{
+    margin-top: 13px;
+    border-bottom: 1px #8DC3DA solid;
+    border-left: 1px #8DC3DA solid;
+}
+
+.ficha   h2{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.ficha img{
+    max-height: 100px; 	
+    margin: 15px;
+    margin-left: 0;
+    box-shadow: 7px 7px 5px #aaa;
+}
+.botoes{
+    margin: 30px 0;
+}
+.paragrafo{
+    text-align: justify;
+}
+.lista-header {
+    min-height: 62px;
+    background: #8DC3DA;
+    text-align: center;
+}
+.list-content{
+    min-height: 400px;
+    //	padding-top: 20px;
+}
+.list-content th {
+    transition: all .5s;
+}
+.list-content a {
+    display: block;
+    text-decoration: none;
+}
+.lista-header h1{
+    font-weight: bold;
+    padding-top: 10px;
+}
+.list-content a:hover{
+    text-decoration: none;
+}
+.list-content a:hover  th{
+    background: red;
+}
+.class-tipo{
+    display: none;
+}
+.borda-recibo{
+    background:  #DAE1FF  ;
+    border: 20px #8DC3DA ridge;
+    border-radius: 8px;
+    box-shadow: 20px 20px 15px;
+    min-height: 650px;
+
+}
+.borda-recibo h2{
+    font-weight: bold;
+}
+.recibo-header input{
+    margin-top: 20px;
+}
+.borda-recibo textarea{
+    resize: none;
+}
+.referente{
+    height: 75px;
+}
+hr{
+    margin: 0px;
+    margin-bottom: 10px;
+}
+#extenso{
+    font-size: 18px;
+    font-weight: bold;
+}
+.number-recibo{
+    font-size: 20px;
+    font-weight: bold;
+}
+.assinatura h3{
+    padding-bottom: 35px;
+    border-bottom: 1px solid black;
+}
+.panel-mensalidade .col-lg-9  {
+    border-bottom: 1px #004981  dashed;
+}
+.panel-mensalidade .form-control{
+    // min-height: 40px;
+}
+.panel-mensalidade h4{
+    margin-bottom: 0;
+}
+.botoes-mensalidade{
+    margin: 20px 0 ;
+}
+
+body{
+    //background: #F00 ;
+}
+body > div{
+    // background: none;
+    /// background: url("../images/user.png") no-repeat center;
+}
+.recibo-content{
+    position: relative;
+    margin-bottom: 100px;
+}
+.recibo{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#fundo{
+    width: 70%;
+    margin:  60px 0 100px 250px ;
+}
+.sidebar{
+    // border: 1px solid black;
+}
+.sidebar hr{
+    border: #ccc 1px solid;
+}
+.user-home-sidebar{
+    padding-top:  10px;
+}
+.user-home-sidebar .line{
+    // border-bottom: 1px solid #e4e4e4;
+    // height: 40px;
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    padding-top: 35px;
+}
+.logo img{
+    width:  120px;    
+}
+
+.content-main   , .content{
+    margin-bottom: 200px;
+}
+.login .botao{
+    //  border: 1px red solid;
+    padding-left: 200px;
+}
+div{
+  //  border: 1px solid black;
+}
+.cpf{
+    line-height: 1.428571;
+}
+.title-history{
+    border-bottom: 2px solid #999;
+}
+.line{
+    min-height: 1px;
+    background: #ccc;
+}
+
+.panel .col-lg-1, .panel .col-lg-2, .panel .col-lg-3, .panel .col-lg-4, .panel .col-lg-5, .panel .col-lg-6{
+    text-align: left;
+} 
+
+@media screen{
+    .dados-pessoais{
+       height: 60px;
+    }
+}

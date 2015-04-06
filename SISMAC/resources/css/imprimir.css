@@ -1,0 +1,97 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 25, 2015, 3:25:24 PM
+    Author     : gustavo
+*/
+*{
+    margin: 0 !important;
+    background:transparent !important;
+    color:#000 !important;
+    text-shadow:none !important;
+    filter:none !important;
+    -ms-filter:none !important;
+}
+body{
+    background: blue !important;
+    height: 10% !important; 
+   // background-image: url(../images/user.png);
+}
+.recibo-content{
+    height: 10% !important;
+    border: solid 1px #000;
+    height: 430px !important;
+    padding: 5px;
+   
+}
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5 , .col-lg-6,
+.col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{
+    float: left;
+    //  margin: 0 !important;
+    //   border: solid #000 1px;
+}
+.col-lg-1{
+    width: 8.3333333333333% !important ;
+}
+.col-lg-2{
+    width: 16.666666666667% !important ;
+}
+.col-lg-3{
+    width: 25% !important ;
+}
+.col-lg-4{
+    width: 33.333333333333% !important ;
+}
+.col-lg-5{
+    width: 41.666666666667% !important ;
+}
+.col-lg-6{
+    width: 50% !important ;
+}
+.col-lg-7{
+    width: 58.333333333333% !important ;
+}
+.col-lg-8{
+    width: 66.666666666667% !important ;
+}
+.col-lg-9{
+    width: 75% !important ;
+}
+.col-lg-10{
+    width: 83.333333333333% !important ;
+}
+.col-lg-11{
+    width: 91.666666666667% !important ;
+}
+.col-lg-12{
+    width: 100% !important ;
+}
+.form-control{
+    width: 100% !important;
+    //  margin: 0 !important;
+}
+
+textarea, .col-lg-12 .form-group .referente{
+    height: 50px !important;
+    margin: 0 !important;
+}
+input{
+    //  margin: 0 !important;
+}
+.col-lg-2 .btn{
+    display: none ;
+}
+hr{
+    margin-top: 5px !important;
+}
+body > div{
+    background: none;
+}
+#fundo{
+    float: left !important;
+    width: 100%;
+    margin:  60px 0 0 0 !important;
+}

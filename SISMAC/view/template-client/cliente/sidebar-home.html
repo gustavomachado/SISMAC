@@ -1,0 +1,73 @@
+<div class="sidebar">
+	
+	<div class="sidebar-resumo">
+		<div class="titulo sidebar-home">
+			<a href="#">
+				<h3>Resumo de Clientes</h3>
+			</a>
+		</div>
+		<div class="acorddion-body"  >
+			<p>
+				<a href="/SISMAC/controllers/cliente/controller.php?m=listar">
+					<span class="bold">Clientes Cadastrados:</span>
+					<span class="pull-right">{TOTALCLIENTES}</span>
+				</a>
+			</p>
+			<ul>
+				<li>
+					<a href="/SISMAC/controllers/cliente/controller.php?m=listar&filtro1=ativo&v1=1">
+						<span class="bold">Clientes Ativos:</span>
+						<span class="pull-right">{ATIVOS}</span>
+					</a>
+				</li>
+				<li>
+					<a href="/SISMAC/controllers/cliente/controller.php?m=listar&filtro1=ativo&v1=0">
+						<span class="bold">Clientes Inativos:</span>
+						<span class="pull-right">{INATIVOS}</span>
+					</a>
+				</li>
+			</ul>
+			<p>
+				<a href="/SISMAC/controllers/cliente/controller.php?m=listar&filtro1=tipo&v1=f">
+					<span class="bold">Clientes Pessoa F&iacute;sica </span>
+					<span class="pull-right">{TOTALPF}</span>
+				</a>
+			</p>
+			<ul>
+				<li>
+					<a href="/SISMAC/controllers/cliente/controller.php?m=listar&filtro1=tipo&v1=f&filtro2=ativo&v2=1">
+						<span class="bold">Pessoa F&iacute;sica Ativos:</span>
+						<span class="pull-right">{ATIVOSPF}</span>
+					</a>
+				</li>
+				<li>
+					<a href="/SISMAC/controllers/cliente/controller.php?m=listar&filtro1=tipo&v1=f&filtro2=ativo&v2=0">
+						<span class="bold">Pessoa F&iacute;sica Inativos:</span>
+						<span class="pull-right">{INATIVOSPF}</span>
+					</a>
+				</li>
+			</ul>
+			<p>
+				<a href="/SISMAC/controllers/cliente/controller.php?m=listar&filtro1=tipo&v1=j">
+					<span class="bold">Clientes Pessoa J&uacute;ridica: </span>
+					<span class="pull-right">{TOTALPJ}</span>
+				</a>
+			</p>
+			<ul>
+				<li>
+					<a href="/SISMAC/controllers/cliente/controller.php?m=listar&filtro1=tipo&v1=j&filtro2=ativo&v2=1">
+						<span class="bold">Pessoa J&uacute;ridica Ativos:</span>
+						<span class="pull-right">{ATIVOSPJ}</span>
+					</a>
+				</li>
+				<li>
+					<a href="/SISMAC/controllers/cliente/controller.php?m=listar&filtro1=tipo&v1=j&filtro2=ativo&v2=0">
+						<span class="bold">Pessoa J&uacute;ridica Inativos: </span> 
+						<span class="pull-right">{INATIVOSPJ}</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+	</div>
+</div>

@@ -1,0 +1,15 @@
+<div class="content">
+
+    <legend><h1>Bem Vindo ao Sistema Marina &Aacute;guas Claras</h1></legend>
+    <h4>Manaus,{DATA_EXTENSO}</h4>
+</div>
+<script language="javascript">
+    $.ajax({
+        url: "atualizar.php",
+        async: true,
+        type: 'POST',
+        success: function (data, textStatus, jqXHR) {
+                       // alert("data: " + data);
+                    }
+    });
+</script>

@@ -1,0 +1,67 @@
+Pagador         Vencimento Valor(R$)         Carteira Nosso Numero Seu Numero Observacao   DDA 
+FERNANDO SILVA 07/08/2014         1.448,00  156      272136619    33/7        VENCIDO      NÃO 
+MARCOS CALEFFI 23/09/2014         1.810,00  156      283229700    10/9        VENCIDO      SIM 
+ISRAEL COUTO R 03/10/2014         1.000,00  156      283994683    51/9        VENCIDO      NÃO 
+ANTONIO MILITA 10/10/2014           724,00  156      283337545    21/9                     SIM 
+CICERO FERREIR 11/10/2014         1.086,00  156      283348039    26/9                     SIM 
+GRAFICA MODERN 11/10/2014           854,00  156      283366247    37/9                     SIM 
+LUIS CARLOS DO 12/10/2014         1.047,62  156      278033802    40/8                     NÃO 
+AUGUSTO CESAR  14/10/2014         1.733,15  156      283228017    08/9                     NÃO 
+DJABIR JOSE KO 15/10/2014           724,00  156      283332561    18/9                     NÃO 
+SORESA REPRESE 15/10/2014         1.397,80  156      283356925    32/9                     NÃO 
+R.G.CARDOSO-ME 15/10/2014         1.448,00  156      289121547    08/10                    NÃO 
+ANDRE DE SOUZA 15/10/2014         1.810,00  156      289152674    36/10                    SIM 
+SIDNEY JOSE VI 18/10/2014         2.534,00  156      283327702    13/9                     SIM 
+DODO VEICULOS  19/10/2014         1.448,00  156      289119103    06/10                    NÃO 
+PEDRO DE SOUZA 20/10/2014           994,00  156      289153771    42/10                    NÃO 
+ANDRE SOUZA DA 20/10/2014         1.086,00  156      289155636    50/10                    SIM 
+AUTO VIACAO MA 20/10/2014         2.172,00  156      289339644    09.2014                  SIM 
+FABIO GUARNIER 22/10/2014         1.086,00  156      289135166    13/10                    NÃO 
+FBL IMPORTS    22/10/2014         1.810,00  156      289147278    26/10                    NÃO 
+EDUARDO BALDOI 22/10/2014         1.448,00  156      289149258    29/10                    SIM 
+ELIAS SIMAO AS 22/10/2014           603,55  156      289153581    40/10                    NÃO 
+MARCOS CALEFFI 23/10/2014         1.810,00  156      289128807    10/10                    SIM 
+CITY PLASTIK I 23/10/2014         1.407,60  156      289153201    38/10                    SIM 
+CLAUDIA MARIA  24/10/2014           724,00  156      288315934    SET.2014                 SIM 
+AMAZON ECOPARK 24/10/2014           724,00  156      289115879    03/10                    NÃO 
+BERNARDO WALTE 25/10/2014           724,00  156      283358830    34/9                     NÃO 
+HELEN MARIA PE 25/10/2014           362,00  156      288316106    SET.2014                 SIM 
+CLAUDIO CHAVES 26/10/2014           724,00  156      289144317    20/10                    NÃO 
+JOAO VICENTE B 27/10/2014           724,00  156      289152781    37/10                    NÃO 
+CHURRASCARIA B 27/10/2014         1.086,00  156      289154837    47/10                    SIM 
+AGOSTINHO DE O 31/10/2014           465,00  156      289113692    01/10                    NÃO 
+AHMED BARBOSA  31/10/2014           724,00  156      289116901    04/10                    NÃO 
+DODO VEICULOS  31/10/2014         1.605,00  156      289119913    07/10                    NÃO 
+OLDENEY SA VAL 31/10/2014           625,00  156      289129706    11/10                    NÃO 
+JOSE JOAQUIM T 31/10/2014         1.086,00  156      289133302    12/10                    NÃO 
+ELOI PINTO DE  31/10/2014         1.594,10  156      289136545    14/10                    NÃO 
+CR DIST.COM.AT 31/10/2014           724,00  156      289142634    17/10                    NÃO 
+MARCIO AMED BA 31/10/2014           724,00  156      289145462    21/10                    SIM 
+ADSTON POMPEU  31/10/2014         1.086,00  156      289146098    23/10                    NÃO 
+ANTONIO CARLOS 31/10/2014           325,80  156      289150017    31/10                    NÃO 
+ADALBERTO PERE 31/10/2014         1.057,00  156      289153672    41/10                    NÃO 
+ANDRE RICARDO  31/10/2014         1.810,00  156      289154423    45/10                    NÃO 
+VIVALDO MACIEL 01/11/2014         2.088,70  156      289142287    16/10                    NÃO 
+TATIANA CALDER 01/11/2014           362,00  156      289146247    24/10                    NÃO 
+DEVANEI GRIGOL 01/11/2014         3.620,00  156      289149076    28/10                    NÃO 
+DANIEL MOREIRA 02/11/2014         1.330,00  156      289152302    34/10                    NÃO 
+AMAZON ECOPARK 03/11/2014         1.448,00  156      289115010    02/10                    NÃO 
+ALEGRA IND. E  03/11/2014           724,00  156      289154209    43/10                    SIM 
+ISRAEL COUTO R 03/11/2014         1.000,00  156      289154274    44/10                    NÃO 
+SEBASTIAO BEZE 04/11/2014           570,00  156      289118006    05/10                    SIM 
+ARMANDO ANDRAD 06/11/2014           724,00  156      289147062    25/10                    NÃO 
+PAULO FERNANDO 06/11/2014           349,00  156      289149431    30/10                    NÃO 
+GDA IMOBILIARI 06/11/2014           724,00  156      289155131    49/10                    NÃO 
+LEMAN ENG. E C 07/11/2014         1.282,00  156      283357980    33/9                     NÃO 
+ANTONIO MILITA 10/11/2014           724,00  156      289145850    22/10                    SIM 
+CICERO FERREIR 11/11/2014         1.086,00  156      289147591    27/10                    SIM 
+GRAFICA MODERN 11/11/2014           854,00  156      289152385    35/10                    SIM 
+LUIS CARLOS DO 12/11/2014         1.047,62  156      289153516    39/10                    NÃO 
+AUGUSTO CESAR  14/11/2014         1.733,15  156      289127155    09/10                    NÃO 
+DJABIR JOSE KO 15/11/2014           724,00  156      289144051    19/10                    NÃO 
+SORESA REPRESE 15/11/2014         1.398,00  156      289150223    32/10                    NÃO 
+EMANUEL JOSE F 10/10/2014         2.172,00  157      101398511    46/10                    NÃO 
+IRLANDES BRAGA 11/10/2014           724,00  157      101249599    18/10                    NÃO 
+ALEXSANDRO CAR 15/10/2014           600,00  157      101195529    15/10                    SIM 
+
+ 

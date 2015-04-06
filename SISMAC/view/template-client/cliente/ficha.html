@@ -1,0 +1,62 @@
+<div class="content" >
+    <legend>
+        <h1>Ficha do Cliente</h1>
+    </legend>
+    <div class="ficha">
+        <div class="panel" >
+            <div class="legend col-lg-12">
+                <h2>Dados do Cliente</h2>
+                <div class="col-lg-2">
+                    <img class="img-thumbnail" src="resources/images/user.png" alt="...">
+                </div>
+            </div>
+            <div class="dados">
+                <span class="col-lg-12">Status:{STATUS}</span>
+                <span class="col-lg-7">
+                    NOME: {NOMECLIENTE}
+                </span>
+                <span class="col-lg-5">
+                    CPF/CNPJ: {CPFCLIENTE}
+                </span>
+                <span class="col-lg-7">
+                    {TIPOREPRESENTANTE}: {CONJUGUE}
+                </span>
+                <span class="col-lg-5">
+                    Data de Nasc.: {DATANASC}
+                </span>
+                <span class="col-lg-12">
+                    TELEFONES: {TELEFONES}
+                </span>
+
+                <span class="col-lg-7">
+                    EMAIL: {EMAIL}
+                </span>
+
+                <span class="col-lg-5">
+                    ENDERE&Ccedil;OS: {BAIRRO}
+                </span>
+                <span class="col-lg-5">
+                    CONTRATOS ATIVOS: {NUMEROCONTRATOS}
+                </span>
+                <span class="col-lg-7">
+                    MENSALIDADES EM ABERTO: {MENSALIDADESABERTO}
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class=" botoes row">
+        <div class="col-lg-3">
+            <a href="?c=cliente&v=editar&id={ID}" class="btn btn-block btn-info">Editar</a>
+        </div>
+        <div class="col-lg-3">
+            <a href="?c=mensalidade&v=buscar{FILTRO}"  class="btn btn-block btn-info">Baixar Mensalidade</a>
+        </div>
+        <div class="col-lg-3">
+            <a href="/SISMAC/controllers/cliente/controller.php?m=excluir&id={ID}" {DISABLED} class="btn btn-block btn-info">Excluir</a>
+        </div>
+        <div class="col-lg-3">
+            <a href="/SISMAC/reports/?v=historico&id={ID}" class="btn btn-block btn-info">Historico</a>
+        </div>
+    </div>
+</div>

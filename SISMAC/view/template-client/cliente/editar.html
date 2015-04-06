@@ -1,0 +1,174 @@
+<div class="content">
+    <div class="title-form">
+        <h1 class="float">Cadastro de clientes</h1>
+        <!-- <a href="?c=embarcacao&v=historico&cliente={ID}" class="float muda-tipo-cliente btn btn-info"  >
+                <span>Reativar Embarca&ccedil;&otilde;es Antigas</span>
+        </a>-->
+    </div>
+    <div class="col-lg-12">
+        <form action="controllers/cliente/controller.php/?m=editar&id={ID}" id="cliente-salvar" method="post">
+            <fieldset>
+                <!-- BEGIN FORMPF -->
+                <legend>
+                    Dados Pessoais do Cliente ( Pessoa F&iacute;sica )
+                </legend>
+                <input type="hidden" name="tipo" value="f">
+                <input type="hidden" name="id" value="{ID}">
+                <div class="col-lg-7">
+                    <label for="nome">Nome do Cliente</label>
+                    <input type="hidden" name="ativo" value="{CLIENTEATIVO}">
+                    <input id="nome" class="form-control" type="text" name="nome" required placeholder="Nome do Cliente" value="{NOMECLIENTE}" >
+                </div>
+                <div class="col-lg-7">
+                    <label for="conjugue">Nome do Conjugue</label>
+                    <input class="form-control" type="text" name="conjugue" value='{NOMECONJUGUE}' placeholder="Nome do Conjugue">
+                </div>
+                <div class="clean ">
+                    <div class="dadospf">
+                        <div class="col-lg-4">
+                            <label for="cpf">CPF do Cliente</label>
+                            <input id="CPF"  class="form-control" type="text" required="true" name="cpf"  placeholder="CPF do Cliente" value='{CPFCLIENTE}' maxlength="14">
+                        </div>
+
+
+                        <div class="col-lg-offset-2 col-lg-4">
+                            <label for="datanascimento">Data de Nascimento</label>
+                            <div class='input-group date datetimepicker'>
+                                <input class="form-control data" type="text" name="datanascimento" 
+                                       data-date-format="DD/MM/YYYY" value="{DATANASCIMENTO}" placeholder="DD/MM/YYYY">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <label for="rg">RG do Cliente</label>
+                            <input id="rg" class="form-control" type="text" name="rg" value="{RGCLIENTE}" required placeholder="RG do Cliente">
+                        </div>
+                        <div class="col-lg-offset-2 col-lg-4">
+                            <label for="datainicio">Cliente Desde:</label>
+                            <div class='input-group date datetimepicker'>
+                                <input class="form-control data" type="text" name="datainicio" 
+                                       data-date-format="DD/MM/YYYY" value="{DATAINICIO}" placeholder="DD/MM/YYYY">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- END FORMPF -->
+                <!-- BEGIN FORMPJ -->
+                <legend>
+                    Dados da Empresa ( Pessoa Jurídica )
+                </legend>
+                <input type="hidden" name="tipo" value="j">
+                <input type="hidden" name="id" value="{ID}">
+                <div class="col-lg-7">
+                    <label for="nome">Nome da Empresa</label>
+                    <input type="hidden" name="ativo" value="{CLIENTEATIVO}">
+                    <input id="nome" class="form-control" type="text" name="nome" required placeholder="Nome da Empresa" value="{NOMECLIENTE}" >
+                </div>
+                <div class="col-lg-7">
+                    <label for="conjugue">Nome do Representante da Empresa</label>
+                    <input class="form-control" type="text" name="conjugue" value='{NOMECONJUGUE}' placeholder="Nome do Representante da Empresa">
+                </div>
+                <div class="clean ">
+                    <div class="dadospf">
+                        <div class="col-lg-4">
+                            <label for="cpf">CNPJ da Empresa</label>
+                            <input id="cnpj"  class="form-control" type="text" name="cpf"  placeholder="XX.XXX.XXX/XXXX-XX" value='{CPFCLIENTE}' maxlength="14">
+                        </div>
+                        <div class="col-lg-4">
+                            <label for="rg">RG do Representante</label>
+                            <input id="rg" class="form-control" type="text" name="rg" value="{RGCLIENTE}" required placeholder="RG do Cliente">
+                        </div>
+
+                        <div class="col-lg-4">
+                            <label for="datanascimento">Nascimento do Representante</label>
+                            <div class='input-group date datetimepicker'>
+                                <input class="form-control data" type="text" name="datanascimento" 
+                                       data-date-format="DD/MM/YYYY" value="{DATANASCIMENTO}" placeholder="DD/MM/YYYY">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- END FORMPJ -->
+                <div id="telefone-area">
+                    <!-- BEGIN TELEFONES -->
+                    <div id="telefone-container-{TELCOUNTER}" class="telefone-area">
+                        <input type="hidden" name="idtel{TELCOUNTER}" value="{IDTEL}">
+                        <input type="hidden" name="ativo-1-{TELCOUNTER}" value="{ATIVOTEL}">
+                        <input  class="text" type="hidden"  name="telefone{TELCOUNTER}" value="{TELCLIENTE}">
+                        <input  class="radio" type="hidden" name="tipotel{TELCOUNTER}" value="{TELTIPO}">
+                        <input class="select" type="hidden"  name="operadora{TELCOUNTER}" value="{TELOPERADORA}" >
+                    </div>
+                    <!-- END TELEFONES -->
+                </div>
+                <div id="endereco-area">
+                    <!-- BEGIN ENDERECOS -->
+                    <div id="endereco-container-{ENDCOUNTER}" class="endereco-area">
+                        <input type="hidden" name="idend{ENDCOUNTER}" value="{IDEND}">
+                        <input type="hidden" name="ativo-2-{ENDCOUNTER}" value="{ATIVOEND}">
+
+                        <input type="hidden" name="tipoend{ENDCOUNTER}" class="radio" value="{TIPOEND}">
+                        <input type="hidden" name="rua{ENDCOUNTER}" class="text" value="{RUA}">
+                        <input type="hidden" name="bairro{ENDCOUNTER}" class="text" value="{BAIRRO}">
+                        <input type="hidden" name="cidade{ENDCOUNTER}" class="text" value="{CIDADE}">
+                        <input type="hidden" name="estado{ENDCOUNTER}" class="text" value="{ESTADO}">
+                        <input type="hidden" name="numero{ENDCOUNTER}" class="text" value="{NUMERO}" >
+                        <input type="hidden" name="cep{ENDCOUNTER}" class="text" value="{CEP}">
+                        <input type="hidden" name="complemento{ENDCOUNTER}" class="text" value="{COMPLEMENTO}">
+                        <input type="hidden" name="referencia{ENDCOUNTER}" class="text" value="{REFERENCIA}">
+                    </div>
+                    <!-- END ENDERECOS -->
+                </div>
+                <div id="email-area">
+                    <!-- BEGIN EMAILS -->
+                    <div id="email-container-{EMAILCOUNTER}" class="email-area">
+                        <input type="hidden" name="idema{EMAILCOUNTER}" value="{IDEMAIL}">
+                        <input type="hidden" name="ativo-3-{EMAILCOUNTER}" value="{ATIVOEMAIL}"> 
+
+                        <input type="hidden" name="email{EMAILCOUNTER}" class="text" value="{EMAIL}">
+                    </div>
+                    <!-- END EMAILS -->
+                </div>
+                <div id="embarcacao-area">
+                    <!-- BEGIN EMBARCACOES -->
+                    <div id="embarcacao-container-{EMBCOUNTER}" class="embarcacao-area">
+                        <input type="hidden" name="idemb{EMBCOUNTER}" value="{IDEMB}">
+                        <input type="hidden" name="ativo-4-{EMBCOUNTER}" value="{ATIVOCONTRATO}">
+                        <input type="hidden" name="nomeemb{EMBCOUNTER}" class="text" value="{EMBARCACAO}">
+                        <input type="hidden" name="marcaemb{EMBCOUNTER}" class="text" value="{MARCA}">
+                        <input type="hidden" name="coremb{EMBCOUNTER}" class="text" value="{COR}">
+                        <input type="hidden" name="casco{EMBCOUNTER}" class="text" value="{NUMEROCASCO}">
+                        <input type="hidden" name="vencimento{EMBCOUNTER}" class="number" value="{VENCIMENTO}" read-only="read-only">
+                        <input type="hidden" name="mensalidade{EMBCOUNTER}" class="text" value="{MENSALIDADE}" readonly="readonly">
+                        <input type="hidden" name="datainicio{EMBCOUNTER}" class="text" value="{DATAINICIOCONTRATO}" readonly="readonly">
+                        <input type="hidden" name="tipoContrato{EMBCOUNTER}" class="select" value="{TIPOCONTRATO}" readonly="readonly">
+                    </div>
+                    <!-- END EMBARCACOES -->
+                </div>
+            </fieldset>
+            <hr>
+        </form>
+        <div class="buttons">
+            <div class="col-lg-2">
+                <button class=" btn btn-info" id="gravar">
+                    <span>Gravar</span>
+                </button>
+            </div>
+            <div class="col-lg-2">
+                <a href="?c=cliente&v=salvar" class="  btn btn-info"  >
+                    <span>Novo</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>

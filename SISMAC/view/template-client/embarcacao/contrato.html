@@ -1,0 +1,95 @@
+<div class="content-main">
+    <legend>
+        <div class="col-lg-12">
+            <h2>Alterar Contrato</h2>
+        </div>
+        <div class="col-lg-6">
+            <h3>Cliente: {NOMECLIENTE}</h3>
+        </div>
+        <div class="col-lg-6">
+            <h3>Embarcação: {NOMEEMB}</h3>
+        </div>
+    </legend>
+
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>Contrato Atual</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-6 form-group">
+                        <h5>Dia Vencimento</h5>
+                        <span class="form-control">{VENCIMENTO}</span>
+                    </div>
+                    <div class="col-lg-6 form-group">
+                        <h5>Tipo de Contrato</h5>
+                        <span class="form-control">{TIPO}</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 form-group">
+                        <h5>Valor</h5>
+                        <span class="form-control">R$ {VALOR}</span>
+                    </div>
+                    <div class="col-lg-6 form-group">
+                        <h5>Data Fim</h5>
+                        <span class="form-control">{DATA}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>Novo Contrato</h3>
+            </div>
+            <form method="post" action="/SISMAC/controllers/embarcacao/controller.php?m=alterar_contrato">
+                <input type="hidden" name="id_cliente" value="{IDCLIENTE}">
+                <input type="hidden" name="id_embarcacao" value="{IDEMB}">
+                <input type="hidden" name="id_contrato_antigo" value="{IDCADASTROANTIGO}">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-6 form-group">
+                            <h5>Dia Vencimento</h5>
+                            <input type="number" min="1" max="31" class="form-control" value="{VENCIMENTO}" required name="vencimento"/>
+                        </div>
+                        <div class="col-lg-6 form-group">
+                            <h5>Tipo de Contrato</h5>
+                            <select class="form-control" name="tipo">
+                                <option value="pre">Pré-Pago</option>
+                                <option value="pos">Pós-Pago</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 form-group">
+                            <h5>Valor</h5>
+                            <input type="text" required class="form-control money" name="valor" value={VALOR}>
+                        </div>
+                        <div class="col-lg-6 form-group">
+                            <h5>Data Inicio</h5>
+                            <div class='input-group date datetimepicker'>
+                                <input class="form-control data" type="text" name="datainicio" 
+                                       data-date-format="DD/MM/YYYY" required disabled
+                                       placeholder="DD/MM/YYYY" value="{DATA}">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <button type="submit" class=" btn btn-info "  >Alterar
+                        <span></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+</div>

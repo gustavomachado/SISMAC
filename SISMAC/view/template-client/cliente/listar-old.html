@@ -1,0 +1,72 @@
+<div>
+	<!-- BEGIN LISTA -->
+	<div class="lista-header">
+		<h4>Lista de Clientes</h4>
+	</div>
+	<table class="table table-hover table-bordered" >
+		<thead>
+			<tr class="active">
+				<th class="center">
+					<a href="#" data-target="codigo">
+						C&Oacute;D.
+					</a>
+					<span class="glyphicon glyphicon-circle-arrow-{ORDERCOD} pull-right"></span>
+				</th>
+				<th>
+					<a href="#"  data-target"tipo" >
+						TIPO
+					</a>
+					<span class="glyphicon glyphicon-circle-arrow-{ORDERTIPO} pull-right"></span>
+				</th>
+				<th>
+					<a href="#" data-target="cpf">
+						CPF/CNPJ
+					</a>
+					<span class="glyphicon glyphicon-circle-arrow-{ORDERCPF} pull-right"></span>
+				</th>
+				<th class="center">
+					<a href="#" data-target="status">
+						STATUS
+					</a>
+					<span class="glyphicon glyphicon-circle-arrow-{ORDERSTATUS} pull-right"></span>
+				</th>
+				<th>
+					<a href="#" data-target="nome">
+						NOME CLIENTE
+					</a>
+					<span class="glyphicon glyphicon-circle-arrow-{ORDERNOME} pull-right"></span>
+				</th>
+				<th class="center" colspan="3">A&Ccedil;&Otilde;ES</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- BEGIN LISTABODY -->
+			<tr class="{CLASS}">
+				<td class="center">{CODIGO}</td>
+				<td>{TIPO}</td>
+				<td>{CPF}</td>
+				<td class="center">{STATUS}</td>
+				<td>{NOME}</td>
+				<td class="center" data-toggle="tooltip" data-placement="left" title="Editar Dados">
+					<a href="?c=cliente&v=editar&id={CODIGO}">
+						<span class="glyphicon glyphicon-pencil"></span>
+					</a>
+				</td>
+				<td class="center" data-toggle="tooltip" data-placement="left" title="Excluir Dados">
+					<a href="#">
+						<span class="glyphicon glyphicon-trash"></span>
+					</a>
+				</td>
+				<td class="center" data-toggle="tooltip" data-placement="left" title="{TITLE}"  >
+					<a href="?c=embarcacao&v=contrato&id={IDEMB}"   >
+						<span class="glyphicon glyphicon-usd"></span>
+					</a>
+				</td>
+			</tr>
+			<!-- END LISTABODY -->
+		</tbody>
+	</table>
+	<!-- END LISTA -->
+		<h3>Sem Resultados de Pesquisa.</h3>
+	<!-- FINALLY LISTA -->
+</div>

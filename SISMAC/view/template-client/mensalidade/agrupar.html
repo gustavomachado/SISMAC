@@ -1,0 +1,164 @@
+<div class="content-main">
+    <div class="m-header col-lg-12">
+        <h1>Mensalidades agrupadas</h1>
+    </div>
+    <div class="col-lg-6"  >
+        <h3>Cliente: {CLIENTE}</h3>
+    </div>
+    <div class="col-lg-3"  >
+        <h3>Embarcações: {COUNT_EMB}</h3>
+    </div>
+    <div class="col-lg-3"  >
+        <h3>Mensaldades: {COUNT_MENSALIDADE}</h3>
+    </div>
+
+    <div class="col-lg-12" style="margin-bottom: 100px;"> 
+        <form  action="controllers/mensalidade/controller.php/?m=agrupar" method="post">
+            <input type="hidden" name="id_cliente" value="{ID_CLIENTE}">
+            <div class="btn-group col-lg-12">
+                <!-- BEGIN LISTA -->
+                <div class="panel panel-default  " >
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <a data-parent="#accordion" href="#collapse{ID}" style="display: block;" data-toggle="collapse">
+                                <h4>
+                                    Embarcação:  {EMBARCACAO}
+                                </h4>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="collapse{ID}" class=" collapse ">
+                        <div  class="panel-body ">
+                            <div class="form-group row col-lg-12">
+                                <div class="col-lg-2  ">
+                                    <label>
+                                        <input type="checkbox" class="markAll" data-target="{ID_EMB}"/>
+                                        Mês
+                                    </label>
+                                </div>
+                                <div class="col-lg-2  ">
+                                    <strong>
+                                        Vencimento:
+                                    </strong>
+                                </div>
+                                <div class="col-lg-2 ">
+                                    <strong>Valor:</strong>
+                                </div>
+                                <div class="col-lg-2">
+                                    <strong>Acr&eacute;scimos:</strong>
+                                </div>
+                                <div class="col-lg-2">
+                                    <strong>Descontos:</strong>
+                                </div>
+                                <div class="col-lg-2">
+                                    <strong>Total</strong>
+                                </div>
+                            </div>
+                            <!-- BEGIN MENSALIDADES -->
+                            <div class="row col-lg-12 form-group" >
+                                <label class="col-lg-2" >
+                                    <input class="{ID_EMB} {ID_EMB}_{MENSALIDADE} units" data-toggle="{ID_EMB}_{MENSALIDADE}" value="{TOTALPARCIAL}" type="checkbox" name="marcados[{ID_EMB}_{MENSALIDADE}]"> {MENSALIDADE_EXT}</label>
+                                <input type="hidden" name="mensalidades[{ID_EMB}_{MENSALIDADE}][valor_contrato]" value="{VALOR}">   
+                                <input type="hidden" name="mensalidades[{ID_EMB}_{MENSALIDADE}][mesreferencia]" value="{MENSALIDADE}">   
+                                <input type="hidden" name="mensalidades[{ID_EMB}_{MENSALIDADE}][idmensalidade]" value="{ID}">
+                                <input id="MULTA_MORA_DIA_{ID_EMB}_{MENSALIDADE}" type="hidden" name="mensalidades[{ID_EMB}_{MENSALIDADE}][multa-moradia]" value="{MULTA_MORADIA}">
+                                <div class="col-lg-2">
+                                    {DATAVENCIMENTO}
+                                </div>
+                                <div class="col-lg-2">
+                                    R$ <span class='CLASS_{ID_EMB}_{MENSALIDADE}' >{VALOR}</span>
+                                </div> 
+                                <div class="col-lg-2">
+                                    <input class="form-control money agruparAcrescimo acrescimo_{ID_EMB}_{MENSALIDADE}" data-parent='{ID_EMB}' data-target='{ID_EMB}_{MENSALIDADE}' name="mensalidades[{ID_EMB}_{MENSALIDADE}][acrescimo]" value="{ACRESCIMO}" maxlength="17">
+                                </div>
+                                <div class="col-lg-2">
+                                    <input class="form-control money agruparDesconto desconto_{ID_EMB}_{MENSALIDADE}" data-parent='{ID_EMB}' data-target='{ID_EMB}_{MENSALIDADE}' name="mensalidades[{ID_EMB}_{MENSALIDADE}][desconto]" value="{DESCONTO}" maxlength="17">
+                                </div>
+                                <div class="col-lg-2">
+                                    R$ <span id="{ID_EMB}_{MENSALIDADE}">{TOTALPARCIAL}</span>
+                                </div>
+                            </div>
+                            <!-- END MENSALIDADES --> 
+                        </div> <!--- div.panel-body --->
+                    </div>
+                    <div class="panel-footer ">
+                        <div class="col-lg-1">
+                            <strong > TOTAL</strong>
+                        </div>
+                        <div class="col-lg-offset-10 ">
+                            R$ <span id="{ID_EMB}">{TOTAL}</span>
+                        </div>
+                    </div>
+                </div> <!--- div.panel-default --->
+                <!-- END LISTA -->
+                <h3>Sem Mensalidades Para Agrupar</h3>
+                <!-- FINALLY LISTA -->  
+            </div>
+            <!-- BEGIN SUBMIT -->
+            <div class="form-group col-lg-12 ">
+                <div class="col-lg-4"  >
+                    <h4>Forma de Pagamento</h4>
+                </div>
+                <div class=" col-lg-offset-6 col-lg-2 "  >
+                    <select name="forma_pagamento" class="form-control">
+                        <!-- BEGIN LISTA_FP -->
+                        <option value="{ID_FP}">{DESCRICAO_FP}</option>
+                        <!-- END LISTA_FP-->
+                    </select>
+                </div>
+            </div>
+            <div class="form-group col-lg-12">
+                <div class="col-lg-4"  >
+                    <h4>Data Pagamento</h4>
+                </div>
+                <div  class=" col-lg-offset-6 col-lg-2 ">
+                    <div class="input-group date datetimepicker">
+                        <input class="form-control data" type="text" name="datapagamento" value="{HOJE}"
+                               data-date-format="DD/MM/YYYY" required placeholder="DD/MM/YYYY">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-lg-12">
+                <div class="col-lg-4"  >
+                    <h1>Total a pagar</h1>
+                </div>
+                <div  class=" col-lg-offset-3 col-lg-5 text-right"  >
+                    <h1>R$ <span id="totalagrupamento"></span> </h1>
+                </div>
+            </div>
+            <div class="form-group col-lg-12">
+                <div class="row col-lg-3">
+                    <button class="btn btn-info " type="submit">Baixar
+                        <span class="glyphicon glyphicon-usd"></span>
+                    </button>
+                </div>
+            </div>
+            <!-- END SUBMIT -->
+            <a class="btn btn-info" href="javascript:history.go(-1)">Sair</a>
+            <!-- FINALLY SUBMIT-->
+        </form>
+    </div>
+</div>
+
+<div class="modal aviso-desconto fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="modal-email">
+    <div class="modal-dialog bs-example-modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Aviso</h4>
+            </div>
+            <div class="modal-body">
+                <h3>Aten&ccedil;&atilde;o!</h3>
+                <p>O valor do desconto est&aacute; maior do que o valor da mensalidade.</p>
+            </div>
+            <div class="modal-footer">
+                <div class="float-r">
+                    <button type="button" class="btn btn-info cancel" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
