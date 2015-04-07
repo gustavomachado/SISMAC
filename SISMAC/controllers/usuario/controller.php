@@ -57,6 +57,9 @@ if (isset($_GET['m'])) {
         case 'forma_pagamento':
             addFormaPagamento($dao);
             break;
+        case 'parametros':
+            parametros($dao);
+            break;
         default:
 
             break;
@@ -179,6 +182,13 @@ function addFormaPagamento(GenericDAO $dao) {
                 $dao->query("INSERT INTO marina.formapagamento(descricao)values('$forma');");
             }
         }
+    }
+    header("Location: /SISMAC/?c=parametros&v=configurar");
+}
+
+function parametros(GenericDAO $dao) {
+    foreach ($_POST as $chave => $parametro) {
+        $dao->query("UPDATE marina.parametros SET valor='$parametro' WHERE chave='$chave'");
     }
     header("Location: /SISMAC/?c=parametros&v=configurar");
 }

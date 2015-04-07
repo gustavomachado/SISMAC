@@ -138,7 +138,7 @@ abstract class GenericDAO implements DAO {
         return 'insert into ' . $this->banco->getSchema() . ".";
     }
 
-    private function finaliza($resultado) {
+    public function finaliza($resultado) {
         // showDetails($resultado);
         if ($resultado) {
             $this->banco->efetivarTransacao();

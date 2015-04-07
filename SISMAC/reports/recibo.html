@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="ISO-8859-1">
+        <meta charset="UTF-8">
         <link rel="shortcut icon" href="../resources/images/user.png">
         <title>SisMAC-Marina &Aacute;guas Claras</title>
         <link rel="stylesheet" href="../resources/css/bootstrap.css">
@@ -33,7 +33,7 @@
             <div class="recibo">
                 <div class="recibo-header col-lg-12">
                     <div class=" col-lg-4">
-                        <h2>Recibo Nº</h2>
+                        <h2>Recibo NÂº</h2>
                     </div>
                     <div class="col-lg-3">
                         <input class="form-control number-recibo text-right"  value="{NUMRECIBO}" disabled="disable" >
@@ -86,8 +86,8 @@
                             <h3 class="text-center"> Marina &Aacute;guas Claras</h3>
                         </div>
                         <div class="">
-                            <h4 class="text-center">Andr&eacute; Oliveira Ferreira</h4>
-                            <h6 class="text-center">CNPJ:07.355.785/0001-64</h6>
+                            <h4 class="text-center">{NOME_REPRESENTANTE}</h4>
+                            <h6 class="text-center">CNPJ:<span id="cnpj">{CNPJ_EMPRESA}</span></h6>
                         </div>
                     </div>
                 </div>
@@ -101,7 +101,7 @@
             <div class="bo rda-recibo">
                 <div class="recibo-header col-lg-12">
                     <div class=" col-lg-4">
-                        <h2>Recibo Nº</h2>
+                        <h2>Recibo NÂº</h2>
                     </div>
                     <div class="col-lg-3">
                         <input class="form-control number-recibo text-right"  value="{NUMRECIBO}" disabled="disable" >

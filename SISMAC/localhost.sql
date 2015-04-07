@@ -761,6 +761,9 @@ INSERT INTO `usuario` (`id`, `login`, `senha`, `idperfil`, `ativo`, `nome`) VALU
 (1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 1, 1, 'root'),
 (2, 'gustavo.machado', '21232f297a57a5a743894a0e4a801fc3', 1, 1, 'gustavo de souza machado');
 
+insert into marina.parametros(chave)values
+('nome-emitente-recibo'),('endereco-emitente-recibo'),('cpf-cnpj-emitente-recibo'),
+('multa-atraso'),('juros-mes'),('nome-representante'),('cnpj-empresa'),('mensagem-padrao-recibo');
 
 
 -- --------------------------------------------------------

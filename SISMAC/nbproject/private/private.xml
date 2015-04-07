@@ -3,15 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp/www/SISMAC/view/template-client/nav.html</file>
-            <file>file:/C:/wamp/www/SISMAC/view/loader/parametros/configurar.php</file>
-            <file>file:/C:/wamp/www/SISMAC/resources/js/functions.js</file>
-            <file>file:/C:/wamp/www/SISMAC/view/loader/usuario/salvar.php</file>
-            <file>file:/C:/wamp/www/SISMAC/view/loader/footer.php</file>
             <file>file:/C:/wamp/www/SISMAC/controllers/usuario/controller.php</file>
-            <file>file:/C:/wamp/www/SISMAC/view/loader/pesquisar/home.php</file>
-            <file>file:/C:/wamp/www/SISMAC/generics/GenericDAO.php</file>
+            <file>file:/C:/wamp/www/SISMAC/view/loader/mensalidade/baixar.php</file>
+            <file>file:/C:/wamp/www/SISMAC/model/DAO/ReciboDAO.php</file>
+            <file>file:/C:/wamp/www/SISMAC/view/loader/parametros/configurar.php</file>
             <file>file:/C:/wamp/www/SISMAC/view/template-client/parametros/configurar.html</file>
+            <file>file:/C:/wamp/www/SISMAC/reports/recibo.php</file>
+            <file>file:/C:/wamp/www/SISMAC/reports/recibo.html</file>
+            <file>file:/C:/wamp/www/SISMAC/generics/GenericDAO.php</file>
         </group>
     </open-files>
 </project-private>

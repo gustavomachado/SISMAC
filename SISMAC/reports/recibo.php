@@ -54,6 +54,8 @@ $template->NUMRECIBO = $recibo->getIdRecibo();
 $template->NOMEEMITENTE = $parametros['nome-emitente-recibo'];
 $template->ENDEMITENTE = $parametros['endereco-emitente-recibo'];
 $template->CPFCNPJEMITENTE = $parametros['cpf-cnpj-emitente-recibo'];
+$template->NOME_REPRESENTANTE = $parametros['nome-representante'];
+$template->CNPJ_EMPRESA = $parametros['cnpj-empresa'];
 
 $template->CURDATE = date("d/m/Y");
 
