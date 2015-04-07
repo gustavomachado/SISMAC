@@ -16,7 +16,7 @@ class ReciboDAO extends GenericDAO {
 
     public function getParameters() {
 
-        $parametros = array("nome-emitente-recibo", "endereco-emitente-recibo", 
+        $parametros = array("nome-emitente-recibo", "endereco-emitente-recibo", "mensagem-padrao-recibo",
                             "cpf-cnpj-emitente-recibo","multa-atraso","juros-mes","nome-representante","cnpj-empresa");
 
         $banco = $this->getBanco();

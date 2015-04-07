@@ -37,9 +37,9 @@ if (isset($_REQUEST['id'])) {
     $valorRecibo = $contrato->getMensalidade() - $mensalidade->getDesconto() + $mensalidade->getAcrescimo();
     $template->VALORRECIBO = "R$ " . number_format($valorRecibo, 2, ',', '.');
 
-    if (isset($_SESSION['referente'])) {
-        $template->REFERENTE = $_SESSION['referente'];
-    }
+
+    $template->REFERENTE = $parametros['mensagem-padrao-recibo'];
+
     if (isset($_SESSION['recebido'])) {
         $template->CLIENTE = $_SESSION['recebido'];
     }

@@ -8,7 +8,8 @@ session_start();
  */
 
 $template->SELECTED4 = "selected";
-
+$i = 0;
+$j = 0;
 $uLogado = unserialize($_SESSION['usuario']);
 if ($uLogado->getIdPerfil() == 1) {
 
@@ -21,15 +22,18 @@ if ($uLogado->getIdPerfil() == 1) {
     while ($linha = $banco->fetchArray($resultado)) {
         $template->FORMA_PAGAMENTO = $linha['descricao'];
         $template->block('FORMAS_PAGAMENTO');
+        $i++;
     }
 
+    $template->COUNT_ATIVAS = $i;
     $resultado = $banco->executaSQL("SELECT * FROM marina.formapagamento WHERE ativo=0");
 
     while ($linha = $banco->fetchArray($resultado)) {
         $template->FORMA_PAGAMENTO = $linha['descricao'];
         $template->block('FORMAS_PAGAMENTO_INATIVAS');
+        $j++;
     }
-
+  $template->COUNT_INATIVAS = $j;
     $resultado = $banco->executaSQL("SELECT * FROM marina.parametros ");
 
     while ($linha = $banco->fetchArray($resultado)) {

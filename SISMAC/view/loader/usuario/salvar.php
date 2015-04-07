@@ -23,7 +23,7 @@ $usuarioDAO = new UsuarioDAO(new Banco());
 $uLogado = unserialize($_SESSION['usuario']);
 
 if ($uLogado->getIdPerfil() == 1) {
-    $listaUsuarios = $usuarioDAO->pesquisar(new Usuario(), "ativo=1 and login != 'admin' and id != " . $uLogado->getId());
+    $listaUsuarios = $usuarioDAO->pesquisar(new Usuario(), "ativo=1 and login != 'admin' ");
     foreach ($listaUsuarios as $usuario) {
         $template->USUARIO = $usuario->getLogin();
         $template->ID = $usuario->getId();

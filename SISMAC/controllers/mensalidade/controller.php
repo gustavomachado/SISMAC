@@ -102,7 +102,7 @@ function baixar() {
             echo "here1";
         }
     } else if ($mDAO->editar($mensalidade)) {
-        showDetails($cliente);
+       // showDetails($cliente);
         set("recebido", $cliente[0]->getNome());
         set("referente", "Pagamento de mensalidade &agrave; marina &Aacute;guas Claras, relacionado ao servi&ccedil;o de hospedagem de embarca&ccedil;&otilde;es");
         header("Location: /SISMAC/reports/?v=recibo&id=" . $mensalidade->getId());

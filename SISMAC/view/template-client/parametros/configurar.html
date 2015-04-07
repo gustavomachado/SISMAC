@@ -13,8 +13,10 @@
             </fieldset>
         </form>
         <div class="col-lg-offset-1 col-lg-4">
-            <a href='#fp-a' data-toggle="collapse" class="btn btn-default form-control">Formas de Pagamento - Ativas</a>
-            <div id="fp-a" class="collapse in col-lg-12" style="margin-top: 15px;">
+            <a href='#fp-a' data-toggle="collapse" class="btn btn-default form-control">
+                <span  class="badge pull-right">{COUNT_ATIVAS}</span>
+                Formas de Pagamento - Ativas</a>
+            <div id="fp-a" class="collapse   col-lg-12" style="margin-top: 15px;">
                 <!-- BEGIN FORMAS_PAGAMENTO -->
                 <div class="col-lg-10">{FORMA_PAGAMENTO}</div>
                 <a class="col-lg-1" href="controllers/usuario/controller.php?m=forma_pagamento&inserir=0&forma={FORMA_PAGAMENTO}">
@@ -24,8 +26,10 @@
             </div>
         </div>
         <div class="  col-lg-4">
-            <a href='#fp' data-toggle="collapse" class="btn btn-default form-control">Formas de Pagamento - Inativas</a>
-            <div id="fp" class="collapse in col-lg-12" style="margin-top: 15px;">
+            <a href='#fp' data-toggle="collapse" class="btn btn-default form-control">
+                <span  class="badge pull-right">{COUNT_INATIVAS}</span>
+                Formas de Pagamento - Inativas</a>
+            <div id="fp" class="collapse   col-lg-12" style="margin-top: 15px;">
                 <!-- BEGIN FORMAS_PAGAMENTO_INATIVAS -->
                 <div class="col-lg-10">{FORMA_PAGAMENTO}</div>
                 <a class="col-lg-1" href="controllers/usuario/controller.php?m=forma_pagamento&restore=1&forma={FORMA_PAGAMENTO}">
@@ -73,7 +77,7 @@
     </div>
     <div class="col-lg-12">
         <h3>Multas e porcentagems</h3>
-       <form action="controllers/usuario/controller.php?m=parametros" method="post">
+        <form action="controllers/usuario/controller.php?m=parametros" method="post">
             <fieldset>
                 <div class="row col-lg-12">
                     <div class="form-group col-lg-2">
