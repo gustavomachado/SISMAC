@@ -1,9 +1,21 @@
 <?php
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+session_start();
+require_once('config.php');
+require_once ($path . 'resources/functions/functions.php');
+
+if (isset($_SESSION['msgbody'])) {
+
+    $MSG_CLASS = 'msg ' . get('msgclass');
+    $MSG_TITLE = get('title');
+    $MSG_BODY = get('msgbody');
+
+    unset($_SESSION['msgclass']);
+    unset($_SESSION['title']);
+    unset($_SESSION['msgbody']);
+} else {
+
+    $MSG_CLASS = "no-msg";
+}
 ?>
 
 <html>
@@ -31,17 +43,48 @@
 
     </head>
     <body>
-
+        <div id="msg-area" class="<?=$MSG_CLASS?>">
+            <h2><?=$MSG_TITLE?></h2>
+            <h4><?=$MSG_BODY?></h4>
+        </div>
         <div class="col-lg-12  text-center main-header " >
-            <img src="resources/images/logo.png" style="width: 100%;">
+            <img src="resources/images/logo.png" style="max-height: 100%;">
         </div>
 
-        <div class="content-main-mobile" style="border: 1px solid black;">
-            <form>
+        <div class="content-main-mobile" style="border: 1px solid black; min-height: 52%;">
+            <form class="form col-lg-12" method="post" action="controllers/usuario/controller.php?m=login&mobile=1">
+                <legend>Login</legend>
                 <fieldset>
-                    
+
+                    <div class="form-group">
+                        <label>Usu&aacute;rio</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-user"></span>
+                            </span>
+                            <input class="form-control" type="text" name="nome" placeholder="EX. gustavo.machado">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Senha</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-lock"></span>
+                            </span>
+                            <input class="form-control" type="password" name="senha" >
+                        </div>
+                    </div>
+
                 </fieldset>
+                <div class="form-group ">
+                    <button class="btn btn-info " type="submit">Logar</button>
+                </div>
             </form>
+        </div>
+
+        <div class="linha"></div>
+        <div class="footer">
+
         </div>
     </body>
 </html>

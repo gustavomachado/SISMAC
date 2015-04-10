@@ -181,4 +181,33 @@ function getMesExtenso($mes) {
     return $mesExtenso[date("M", mktime(0, 0, 0, $mes, 1, date("Y")))];
 }
 
+function objectToArray($obj) {
+    //   echo get_class($obj) . "chamou Object to array<br>";
+    
+    $resultado = array();
+    $methodsList = get_class_methods($obj);
+   
+    foreach ($methodsList as $method) {
+        if (strcasecmp(substr($method, 0, 3), "get") == 0) {
+            $subObj = $obj->{"$method"}();
+            $keyObj = substr($method, 3);
+            $keyObj[0] = strtolower($keyObj[0]);
+            if (is_array($subObj) && count($subObj) > 0) {
+                foreach ($subObj as $key => $intObj) {
+                    if (is_object($intObj)) {
+                        $resultado [$keyObj][$key] = objectToArray($intObj);
+                    } else {
+                        $resultado [$keyObj][$key] = $intObj;
+                    }
+                }
+            } else if (is_object($subObj)) {
+                $resultado [$keyObj] = objectToArray($subObj);
+            } else {
+                $resultado [$keyObj] = $subObj;
+            }
+        }
+    } 
+    return $resultado;
+}
+
 ?>

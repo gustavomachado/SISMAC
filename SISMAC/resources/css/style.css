@@ -1,4 +1,6 @@
- 
+.loading{
+    display: none;
+} 
 body , legend{
     color: #004961;	
 }

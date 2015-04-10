@@ -41,16 +41,31 @@ if (isset($_GET['m'])) {
             $usuario->setlogin($login);
             $usuario->setSenha($senha);
             $usuario->setAtivo(1);
+
+            $isMobile = isset($_GET['mobile']);
+            
+        /*    showDetails($usuario);
+            exit;
+*/
             if ($dao->exists($usuario)) {
                 $usuario = $dao->pesquisar($usuario, "login = '" . $usuario->getLogin() . "' and senha = '" . $usuario->getSenhaMD5() . "'");
                 $usuario = $usuario[0];
                 $_SESSION['usuario'] = serialize($usuario);
-                header("Location: /SISMAC/?c=usuario&v=home");
+                if ($isMobile) {
+                    header("Location: /SISMAC/take_picture.php");
+                } else {
+                    header("Location: /SISMAC/?c=usuario&v=home");
+                }
             } else {
+                
                 $_SESSION['msgbody'] = "Usu&aacute;rio n&atilde;o encontrado.";
                 $_SESSION['title'] = "Erro ao logar";
                 $_SESSION['msgclass'] = "msg-erro";
-                header("Location: /SISMAC/?c=usuario&v=login");
+                if ($isMobile) {
+                    header("Location: /SISMAC/login_mobile.php");
+                } else {
+                    header("Location: /SISMAC/?c=usuario&v=login");
+                }
             }
 
             break;

@@ -19,10 +19,9 @@ $(document).ready(function () {
         setInactive($(this).attr("data-parent"), $(this).attr("data-target"), $(this).attr("value"));
     });
 
-
-    $(".add").click(function(){
-       var target =  $(this).attr("data-target");
-       $("#"+target).submit();
+    $(".add").click(function () {
+        var target = $(this).attr("data-target");
+        $("#" + target).submit();
     });
 
 
@@ -271,12 +270,54 @@ $(document).ready(function () {
 
     });
 
-    try{
-          $("#extenso").val($(".valor").val().extenso(true));
-      }catch(e){
-         // alert(e);
-      }
-  
+    try {
+        $("#extenso").val($(".valor").val().extenso(true));
+    } catch (e) {
+        // alert(e);
+    }
+
+    if (typeof ($(".search")) !== undefined) {
+
+        $(".search").click(function () {
+
+            var embarcacao = $("#emb").val();
+
+            var isValid = /\w+/.test(embarcacao);
+
+            if (isValid) {
+                $(".loading").css("display", "inline-block");
+                // alert(isValid + ' teste ' + embarcacao);
+                var jsonRequest = {'embarcacao': embarcacao};
+                $.ajax({
+                    type: 'post',
+                    url: 'carrega_embarcacao.php',
+                    data: jsonRequest,
+                    async: true,
+                    success: function (data, textStatus, jqXHR) {
+                        var result = $.parseJSON(data);
+                        
+                        for (linha in result) {
+                            var nome =  result[linha]['nome'].toUpperCase();
+                            
+                            $(".lista-pesquisa")
+                                    .append($("<a>")
+                                                .html(nome)
+                                                .addClass("take-picture")
+                                                .addClass("btn")
+                                                .addClass("btn-info")
+                                                .addClass("form-control")
+                                    );
+                        }
+                        $(".loading").css("display", "none");
+                    }
+                });
+            }
+
+
+        });
+
+    }
+
 });
 
 
